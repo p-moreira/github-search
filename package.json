@@ -13,7 +13,7 @@
     "format": "prettier --write src/",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build:tokens": "cd src/assets/design-system && token-transformer tokens/ds-figma-tokens.json tokens/tokens.json && style-dictionary build"
+    "build:tokens": "cd src/assets/design-system && token-transformer tokens/ds-exported-figma-tokens.json tokens/tokens.json && style-dictionary build"
   },
   "dependencies": {
     "vue": "^3.3.4",
