@@ -1,18 +1,18 @@
 {
-  "source": ["tokens/**/tokens.json"],
-  "platforms": {
-    "css": {
-      "transformGroup": "css",
-      "buildPath": "build/css/",
-      "files": [
-        {
-          "format": "css/variables",
-          "destination": "variables.css",
-          "options": {
-            "outputReferences": true
-          }
+    "source": ["tokens/**/tokens.json"],
+    "platforms": {
+        "css": {
+            "transformGroup": "css",
+            "buildPath": "build/css/",
+            "files": [
+                {
+                    "format": "css/variables",
+                    "destination": "variables.css",
+                    "options": {
+                        "outputReferences": true
+                    }
+                }
+            ]
         }
-      ]
     }
-  }
 }
