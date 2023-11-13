@@ -1,6 +1,13 @@
-# github-search
+# Github search application
 
-This template should help get you started developing with Vue 3 in Vite.
+Search by users on Github.
+
+- Vue.js 3
+- Vite
+- Typescript
+- Vitest
+- Storybookjs to develop components in isolation mode
+- CSS tokens using figma + Style Dictionary
 
 ## Recommended IDE Setup
 
