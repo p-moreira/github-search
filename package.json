@@ -12,7 +12,8 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build:tokens": "cd src/assets/design-system && token-transformer tokens/ds-figma-tokens.json tokens/tokens.json && style-dictionary build"
   },
   "dependencies": {
     "vue": "^3.3.4",
@@ -44,6 +45,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook": "^7.5.3",
+    "style-dictionary": "^3.9.0",
+    "token-transformer": "^0.0.33",
     "typescript": "~5.2.0",
     "vite": "^4.4.11",
     "vitest": "^0.34.6",
