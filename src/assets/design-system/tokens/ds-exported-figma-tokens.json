@@ -952,6 +952,60 @@
         "type": "borderRadius"
       }
     },
+    "spacing": {
+      "xs": {
+        "value": "{ref.spacing.1}",
+        "type": "spacing"
+      },
+      "sm": {
+        "value": "{ref.spacing.2}",
+        "type": "spacing"
+      },
+      "md": {
+        "value": "{ref.spacing.4}",
+        "type": "spacing"
+      },
+      "lg": {
+        "value": "{ref.spacing.6}",
+        "type": "spacing"
+      },
+      "xl": {
+        "value": "{ref.spacing.8}",
+        "type": "spacing"
+      },
+      "2xl": {
+        "value": "{ref.spacing.10}",
+        "type": "spacing"
+      },
+      "3xl": {
+        "value": "{ref.spacing.12}",
+        "type": "spacing"
+      },
+      "4xl": {
+        "value": "{ref.spacing.14}",
+        "type": "spacing"
+      },
+      "5xl": {
+        "value": "{ref.spacing.16}",
+        "type": "spacing"
+      },
+      "6xl": {
+        "value": "{ref.spacing.18}",
+        "type": "spacing"
+      },
+      "7xl": {
+        "value": "{ref.spacing.20}",
+        "type": "spacing"
+      },
+      "8xl": {
+        "value": "{ref.spacing.22}",
+        "type": "spacing"
+      },
+      "9xl": {
+        "value": "{ref.spacing.24}",
+        "type": "spacing"
+      }
+    },
     "ref": {
       "fontFamily": {
         "default": {
@@ -1107,6 +1161,104 @@
         "underline": {
           "value": "underline",
           "type": "textDecoration"
+        }
+      },
+      "spacing": {
+        "1": {
+          "value": "0.25rem",
+          "type": "spacing"
+        },
+        "2": {
+          "value": "0.5rem",
+          "type": "spacing"
+        },
+        "3": {
+          "value": "0.75rem",
+          "type": "spacing"
+        },
+        "4": {
+          "value": "1rem",
+          "type": "spacing"
+        },
+        "5": {
+          "value": "1.25rem",
+          "type": "spacing"
+        },
+        "6": {
+          "value": "1.5rem",
+          "type": "spacing"
+        },
+        "7": {
+          "value": "1.75rem",
+          "type": "spacing"
+        },
+        "8": {
+          "value": "2rem",
+          "type": "spacing"
+        },
+        "9": {
+          "value": "2.25rem",
+          "type": "spacing"
+        },
+        "10": {
+          "value": "2.5rem",
+          "type": "spacing"
+        },
+        "11": {
+          "value": "2.75rem",
+          "type": "spacing"
+        },
+        "12": {
+          "value": "3rem",
+          "type": "spacing"
+        },
+        "13": {
+          "value": "3.25rem",
+          "type": "spacing"
+        },
+        "14": {
+          "value": "3.5rem",
+          "type": "spacing"
+        },
+        "15": {
+          "value": "3.75rem",
+          "type": "spacing"
+        },
+        "16": {
+          "value": "4rem",
+          "type": "spacing"
+        },
+        "17": {
+          "value": "4.25rem",
+          "type": "spacing"
+        },
+        "18": {
+          "value": "4.5rem",
+          "type": "spacing"
+        },
+        "19": {
+          "value": "4.75rem",
+          "type": "spacing"
+        },
+        "20": {
+          "value": "5rem",
+          "type": "spacing"
+        },
+        "21": {
+          "value": "5.25rem",
+          "type": "spacing"
+        },
+        "22": {
+          "value": "5.5rem",
+          "type": "spacing"
+        },
+        "23": {
+          "value": "5.75rem",
+          "type": "spacing"
+        },
+        "24": {
+          "value": "6rem",
+          "type": "spacing"
         }
       }
     }

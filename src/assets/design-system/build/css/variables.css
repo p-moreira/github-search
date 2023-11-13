@@ -1,9 +1,33 @@
 /**
  * Do not edit directly
- * Generated on Mon, 13 Nov 2023 01:42:32 GMT
+ * Generated on Mon, 13 Nov 2023 02:36:47 GMT
  */
 
 :root {
+  --ref-spacing-24: 6rem;
+  --ref-spacing-23: 5.75rem;
+  --ref-spacing-22: 5.5rem;
+  --ref-spacing-21: 5.25rem;
+  --ref-spacing-20: 5rem;
+  --ref-spacing-19: 4.75rem;
+  --ref-spacing-18: 4.5rem;
+  --ref-spacing-17: 4.25rem;
+  --ref-spacing-16: 4rem;
+  --ref-spacing-15: 3.75rem;
+  --ref-spacing-14: 3.5rem;
+  --ref-spacing-13: 3.25rem;
+  --ref-spacing-12: 3rem;
+  --ref-spacing-11: 2.75rem;
+  --ref-spacing-10: 2.5rem;
+  --ref-spacing-9: 2.25rem;
+  --ref-spacing-8: 2rem;
+  --ref-spacing-7: 1.75rem;
+  --ref-spacing-6: 1.5rem;
+  --ref-spacing-5: 1.25rem;
+  --ref-spacing-4: 1rem;
+  --ref-spacing-3: 0.75rem;
+  --ref-spacing-2: 0.5rem;
+  --ref-spacing-1: 0.25rem;
   --ref-text-decoration-underline: underline;
   --ref-text-decoration-none: none;
   --ref-text-case-uppercase: uppercase;
@@ -39,6 +63,19 @@
   --ref-line-height-1: 116%;
   --ref-line-height-0: 112%;
   --ref-font-family-default: Poppins;
+  --spacing-9xl: 6rem;
+  --spacing-8xl: 5.5rem;
+  --spacing-7xl: 5rem;
+  --spacing-6xl: 4.5rem;
+  --spacing-5xl: 4rem;
+  --spacing-4xl: 3.5rem;
+  --spacing-3xl: 3rem;
+  --spacing-2xl: 2.5rem;
+  --spacing-xl: 2rem;
+  --spacing-lg: 1.5rem;
+  --spacing-md: 1rem;
+  --spacing-sm: 0.5rem;
+  --spacing-xs: 0.25rem;
   --radii-rounded: 500px;
   --radii-xl: 24px;
   --radii-lg: 20px;
