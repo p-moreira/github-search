@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 const colors = require('./src/assets/design-system/build/css/tw-extend/color')
+const spacing = require('./src/assets/design-system/build/css/tw-extend/spacing')
 
 module.exports = {
     content: ['./src/**/*.{vue,js,jsx,ts,tsx}', './public/index.html'],
@@ -12,6 +13,7 @@ module.exports = {
             xl: '1600px',
         },
         colors,
+        spacing,
         extend: {},
     },
     plugins: [],

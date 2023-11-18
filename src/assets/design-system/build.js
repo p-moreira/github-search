@@ -4,7 +4,7 @@ const global = require('./tokens/global.json')
 const light = require('./tokens/light.json')
 const dark = require('./tokens/dark.json')
 
-const supportedTokenTypeList = ['color']
+const supportedTokenTypeList = ['color', 'spacing']
 
 const formatValue = (tokenType, value) => {
     let formattedValue
