@@ -23,20 +23,20 @@ StyleDictionaryPackage.registerFormat({
     name: 'css/variables',
     formatter({ dictionary }) {
         return `${this.selectorName} {
-            ${dictionary.allProperties
-                .map((token) => {
-                    const value = formatValue(token.type, token.value)
+    ${dictionary.allProperties
+    .map((token) => {
+        const value = formatValue(token.type, token.value)
 
-                    if (dictionary.usesReference(token.original.value)) {
-                        const reference = dictionary.getReferences(token.original.value)
-                        const referenceName = reference[0].name
-                        return `  --${token.name}: var(--${referenceName}, ${value});`
-                    }
+        if (dictionary.usesReference(token.original.value)) {
+            const reference = dictionary.getReferences(token.original.value)
+            const referenceName = reference[0].name
+            return `  --${token.name}: var(--${referenceName}, ${value});`
+        }
 
-                    return `  --${token.name}: ${value};`
-                })
-                .join('\n')}
-        }`
+        return `  --${token.name}: ${value};`
+    })
+    .join('\n')}
+    }`
     },
 })
 
@@ -108,7 +108,7 @@ console.log('Build started...')
 const configs = [
     {
         brand: 'global',
-        buildTailwindFiles: false,
+        buildTailwindFiles: true,
         selectorName: ':root',
         tokens: global,
     },
