@@ -13,7 +13,11 @@
     "format": "prettier --write src/",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build:tokens": "cd src/assets/design-system && token-transformer tokens/ds-exported-figma-tokens.json tokens/tokens.json && style-dictionary build"
+    "transform:global": "cd src/assets/design-system && token-transformer tokens/ds-exported-figma-tokens.json tokens/global.json global --resolveReferences=false --expandTypography=true",
+    "transform:light": "cd src/assets/design-system && token-transformer tokens/ds-exported-figma-tokens.json tokens/light.json light --resolveReferences=false",
+    "transform:dark": "cd src/assets/design-system && token-transformer tokens/ds-exported-figma-tokens.json tokens/dark.json dark --resolveReferences=false",
+    "build:tokens": "cd src/assets/design-system && node build.js",
+    "build:theme": "npm run transform:global && npm run transform:light && npm run transform:dark && npm run build:tokens"
   },
   "dependencies": {
     "vue": "^3.3.4",
