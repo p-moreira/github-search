@@ -24,18 +24,18 @@ StyleDictionaryPackage.registerFormat({
     formatter({ dictionary }) {
         return `${this.selectorName} {
     ${dictionary.allProperties
-    .map((token) => {
-        const value = formatValue(token.type, token.value)
+        .map((token) => {
+            const value = formatValue(token.type, token.value)
 
-        if (dictionary.usesReference(token.original.value)) {
-            const reference = dictionary.getReferences(token.original.value)
-            const referenceName = reference[0].name
-            return `  --${token.name}: var(--${referenceName}, ${value});`
-        }
+            if (dictionary.usesReference(token.original.value)) {
+                const reference = dictionary.getReferences(token.original.value)
+                const referenceName = reference[0].name
+                return `  --${token.name}: var(--${referenceName}, ${value});`
+            }
 
-        return `  --${token.name}: ${value};`
-    })
-    .join('\n')}
+            return `  --${token.name}: ${value};`
+        })
+        .join('\n')}
     }`
     },
 })
