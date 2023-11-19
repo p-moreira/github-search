@@ -75,7 +75,7 @@ StyleDictionaryPackage.registerFormat({
 function getConfigTailwindFilesByType(typeList) {
     return typeList.map((typeName) => {
         return {
-            destination: `tw-extend/${typeName}.js`,
+            destination: `tailwind/${typeName}.js`,
             format: 'tw/css-variables',
             filter: {
                 type: typeName,
@@ -99,10 +99,10 @@ function getStyleDictionaryConfig(tokensConfig = {}) {
             web: {
                 transformGroup: 'web',
                 prefix: 'ds',
-                buildPath: './build/css/',
+                buildPath: './build/',
                 files: [
                     {
-                        destination: `${brand}-variables.css`,
+                        destination: `css/${brand}-variables.css`,
                         format: 'css/variables',
                         selectorName,
                     },
