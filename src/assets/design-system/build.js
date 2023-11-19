@@ -4,7 +4,17 @@ const global = require('./tokens/global.json')
 const light = require('./tokens/light.json')
 const dark = require('./tokens/dark.json')
 
-const supportedTokenTypeList = ['color', 'spacing']
+const supportedTokenTypeList = [
+    'color',
+    'spacing',
+    'fontFamilies',
+    'fontSizes',
+    'fontWeights',
+    'lineHeights',
+    'letterSpacing',
+    'textCase',
+    'textDecoration',
+]
 
 const formatValue = (tokenType, value) => {
     let formattedValue
@@ -51,7 +61,7 @@ StyleDictionaryPackage.registerFormat({
             `{\n${dictionary.allProperties
                 .map((token) => {
                     const value = formatValue(token.type, token.value)
-                    return `  "${token.path.slice(1).join('-')}": "var(--${token.name}, ${value});"`
+                    return `  "${token.name}": "var(--${token.name}, ${value});"`
                 })
                 .join(',\n')}\n}`
         )

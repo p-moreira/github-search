@@ -1,0 +1,23 @@
+module.exports = {
+  "ds-font-display-large-letter-spacing": "var(--ds-font-display-large-letter-spacing, -0.25);",
+  "ds-font-display-medium-letter-spacing": "var(--ds-font-display-medium-letter-spacing, 0%);",
+  "ds-font-display-small-letter-spacing": "var(--ds-font-display-small-letter-spacing, 0%);",
+  "ds-font-headline-large-letter-spacing": "var(--ds-font-headline-large-letter-spacing, 0%);",
+  "ds-font-headline-medium-letter-spacing": "var(--ds-font-headline-medium-letter-spacing, 0%);",
+  "ds-font-headline-small-letter-spacing": "var(--ds-font-headline-small-letter-spacing, 0%);",
+  "ds-font-title-large-letter-spacing": "var(--ds-font-title-large-letter-spacing, 0%);",
+  "ds-font-title-medium-letter-spacing": "var(--ds-font-title-medium-letter-spacing, 0.1);",
+  "ds-font-title-small-letter-spacing": "var(--ds-font-title-small-letter-spacing, 0.1);",
+  "ds-font-label-large-letter-spacing": "var(--ds-font-label-large-letter-spacing, 0.1);",
+  "ds-font-label-medium-letter-spacing": "var(--ds-font-label-medium-letter-spacing, 0.5);",
+  "ds-font-label-small-letter-spacing": "var(--ds-font-label-small-letter-spacing, 0.5);",
+  "ds-font-body-large-letter-spacing": "var(--ds-font-body-large-letter-spacing, 0.5);",
+  "ds-font-body-medium-letter-spacing": "var(--ds-font-body-medium-letter-spacing, 0.25);",
+  "ds-font-body-small-letter-spacing": "var(--ds-font-body-small-letter-spacing, 0.4);",
+  "ds-ref-letter-spacing-xs": "var(--ds-ref-letter-spacing-xs, -0.25);",
+  "ds-ref-letter-spacing-none": "var(--ds-ref-letter-spacing-none, 0%);",
+  "ds-ref-letter-spacing-sm": "var(--ds-ref-letter-spacing-sm, 0.1);",
+  "ds-ref-letter-spacing-xl": "var(--ds-ref-letter-spacing-xl, 0.5);",
+  "ds-ref-letter-spacing-md": "var(--ds-ref-letter-spacing-md, 0.25);",
+  "ds-ref-letter-spacing-lg": "var(--ds-ref-letter-spacing-lg, 0.4);"
+}

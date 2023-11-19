@@ -1,0 +1,19 @@
+module.exports = {
+  "ds-font-display-large-text-decoration": "var(--ds-font-display-large-text-decoration, none);",
+  "ds-font-display-medium-text-decoration": "var(--ds-font-display-medium-text-decoration, none);",
+  "ds-font-display-small-text-decoration": "var(--ds-font-display-small-text-decoration, none);",
+  "ds-font-headline-large-text-decoration": "var(--ds-font-headline-large-text-decoration, none);",
+  "ds-font-headline-medium-text-decoration": "var(--ds-font-headline-medium-text-decoration, none);",
+  "ds-font-headline-small-text-decoration": "var(--ds-font-headline-small-text-decoration, none);",
+  "ds-font-title-large-text-decoration": "var(--ds-font-title-large-text-decoration, none);",
+  "ds-font-title-medium-text-decoration": "var(--ds-font-title-medium-text-decoration, none);",
+  "ds-font-title-small-text-decoration": "var(--ds-font-title-small-text-decoration, none);",
+  "ds-font-label-large-text-decoration": "var(--ds-font-label-large-text-decoration, none);",
+  "ds-font-label-medium-text-decoration": "var(--ds-font-label-medium-text-decoration, none);",
+  "ds-font-label-small-text-decoration": "var(--ds-font-label-small-text-decoration, none);",
+  "ds-font-body-large-text-decoration": "var(--ds-font-body-large-text-decoration, none);",
+  "ds-font-body-medium-text-decoration": "var(--ds-font-body-medium-text-decoration, none);",
+  "ds-font-body-small-text-decoration": "var(--ds-font-body-small-text-decoration, none);",
+  "ds-ref-text-decoration-none": "var(--ds-ref-text-decoration-none, none);",
+  "ds-ref-text-decoration-underline": "var(--ds-ref-text-decoration-underline, underline);"
+}
