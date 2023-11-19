@@ -1,5 +1,35 @@
 /* main css file */
+@import "../design-system/build/css/global-variables.css";
+@import "../design-system/build/css/light-variables.css";
+@import "../design-system/build/css/dark-variables.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    /* poppins-regular - latin */
+    @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        src: url('./fonts/poppins-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+    /* poppins-500 - latin */
+    @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        src: url('./fonts/poppins-v20-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+    body {
+        font-family: var(--ds-font-body-medium-font-family);
+        font-size: var(--ds-font-body-medium-font-size);
+        font-weight: var(--ds-font-body-medium-font-weight);
+        letter-spacing: var(--ds-font-body-medium-letter-spacing);
+        color: var(--ds-color-on-surface);
+        background-color: var(--ds-color-background);
+    }
+  }
