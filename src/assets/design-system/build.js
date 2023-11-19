@@ -14,6 +14,8 @@ const supportedTokenTypeList = [
     'letterSpacing',
     'textCase',
     'textDecoration',
+    'borderRadius',
+    'opacity',
 ]
 
 const formatValue = (tokenType, value) => {

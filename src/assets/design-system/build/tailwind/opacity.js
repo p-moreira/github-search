@@ -1,0 +1,19 @@
+module.exports = {
+  "ds-opacity-color-hi": "var(--ds-opacity-color-hi, 0.87);",
+  "ds-opacity-color-medium": "var(--ds-opacity-color-medium, 0.6);",
+  "ds-opacity-color-low": "var(--ds-opacity-color-low, 0.38);",
+  "ds-opacity-overlay-hover": "var(--ds-opacity-overlay-hover, 0.08);",
+  "ds-opacity-surface-1": "var(--ds-opacity-surface-1, 0.05);",
+  "ds-opacity-surface-2": "var(--ds-opacity-surface-2, 0.08);",
+  "ds-opacity-surface-3": "var(--ds-opacity-surface-3, 0.11);",
+  "ds-opacity-surface-4": "var(--ds-opacity-surface-4, 0.14);",
+  "ds-opacity-surface-5": "var(--ds-opacity-surface-5, 0.17);",
+  "ds-ref-opacity-5": "var(--ds-ref-opacity-5, 0.05);",
+  "ds-ref-opacity-8": "var(--ds-ref-opacity-8, 0.08);",
+  "ds-ref-opacity-11": "var(--ds-ref-opacity-11, 0.11);",
+  "ds-ref-opacity-14": "var(--ds-ref-opacity-14, 0.14);",
+  "ds-ref-opacity-17": "var(--ds-ref-opacity-17, 0.17);",
+  "ds-ref-opacity-38": "var(--ds-ref-opacity-38, 0.38);",
+  "ds-ref-opacity-60": "var(--ds-ref-opacity-60, 0.6);",
+  "ds-ref-opacity-87": "var(--ds-ref-opacity-87, 0.87);"
+}
