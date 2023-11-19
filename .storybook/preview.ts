@@ -1,5 +1,7 @@
 import type { Preview } from '@storybook/vue3'
 
+import { withThemeByDataAttribute } from "@storybook/addon-themes";
+
 const preview: Preview = {
     parameters: {
         actions: { argTypesRegex: '^on[A-Z].*' },
@@ -10,6 +12,16 @@ const preview: Preview = {
             },
         },
     },
+
+    decorators: [withThemeByDataAttribute({
+        themes: {
+            // nameOfTheme: 'dataAttributeForTheme',
+            light: '',
+            dark: 'dark',
+        },
+        defaultTheme: 'light',
+        dataAttribute: 'data-theme',
+    })]
 }
 
 export default preview
