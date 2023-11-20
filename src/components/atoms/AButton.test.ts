@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom'
 import { describe, expect, it } from 'vitest'
-import { render } from '@testing-library/vue'
+import { render, screen } from '@testing-library/vue'
 import AButton from './AButton.vue'
 
 describe('AButton', () => {
@@ -16,5 +16,12 @@ describe('AButton', () => {
         const button = getByRole('button')
 
         expect(button).toHaveTextContent('Button')
+    })
+
+    it('receives the "disabled" prop and renders the button disabled state', () => {
+        const { getByRole } = render(AButton, { props: { disabled: true } })
+        const button = getByRole('button')
+
+        expect(button).toBeDisabled()
     })
 })
