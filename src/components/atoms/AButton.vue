@@ -15,6 +15,9 @@ withDefaults(
         }"
         :disabled="disabled"
     >
+        <div
+            class="absolute left-0 top-0 h-full w-full rounded-ds-radii-xs bg-ds-color-on-surface opacity-0 transition-opacity duration-300 hover:opacity-ds-opacity-overlay-hover"
+        />
         Button
     </button>
 </template>
