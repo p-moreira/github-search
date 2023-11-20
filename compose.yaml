@@ -7,3 +7,12 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
+
+  storybook:
+    build: .
+    container_name: gs-storybook
+    ports:
+      - 6006:6006
+    volumes:
+      - .:/app
+      - /app/node_modules
