@@ -9,7 +9,8 @@ services:
       - /app/node_modules
 
   storybook:
-    build: .
+    build: 
+      dockerfile: storybook.Dockerfile
     container_name: gs-storybook
     ports:
       - 6006:6006
