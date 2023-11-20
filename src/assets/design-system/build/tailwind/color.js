@@ -47,5 +47,7 @@ module.exports = {
   "ds-color-surface-container-low": "var(--ds-color-surface-container-low, #fef1ee);",
   "ds-color-surface-container-lowest": "var(--ds-color-surface-container-lowest, #ffffff);",
   "ds-color-surface-bright": "var(--ds-color-surface-bright, #fff8f6);",
-  "ds-color-surface-dim": "var(--ds-color-surface-dim, #e4d7d5);"
+  "ds-color-surface-dim": "var(--ds-color-surface-dim, #e4d7d5);",
+  "ds-color-disabled": "var(--ds-color-disabled, #dadae0);",
+  "ds-color-on-disabled": "var(--ds-color-on-disabled, #a3a1a5);"
 }
