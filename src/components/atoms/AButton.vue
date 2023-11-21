@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { computed } from 'vue'
+
 withDefaults(
     defineProps<{
         label?: string
@@ -11,6 +13,11 @@ const emit = defineEmits<{
     (event: 'click'): void
 }>()
 
+const stateClasses = computed(() => ({
+    default: 'cursor-pointer bg-ds-color-primary text-ds-color-on-primary',
+    disabled: 'cursor-not-allowed bg-ds-color-disabled text-ds-color-on-disabled',
+}))
+
 const handleClick = () => {
     emit('click')
 }
@@ -18,10 +25,8 @@ const handleClick = () => {
 
 <template>
     <button
-        class="relative flex cursor-pointer justify-center rounded-ds-radii-xs border-0 bg-ds-color-primary px-ds-spacing-md py-ds-spacing-sm font-ds-font-label-large-font-family text-ds-font-label-large-font-size font-ds-font-label-large-font-weight text-ds-color-on-primary transition-all duration-300"
-        :class="{
-            'bg-ds-color-disabled text-ds-color-on-disabled cursor-not-allowed': disabled,
-        }"
+        class="relative flex justify-center rounded-ds-radii-xs border-0 px-ds-spacing-md py-ds-spacing-sm font-ds-font-label-large-font-family text-ds-font-label-large-font-size font-ds-font-label-large-font-weight transition-all duration-300"
+        :class="[disabled ? stateClasses.disabled : stateClasses.default]"
         :disabled="disabled"
         @click="handleClick"
     >
