@@ -18,11 +18,25 @@ describe('AButton', () => {
         expect(button).toHaveTextContent('Button')
     })
 
-    it('receives the "disabled" prop and renders the button disabled state', () => {
+    it('receives "disabled: true" prop and renders the button disabled state', () => {
         const { getByRole } = render(AButton, { props: { disabled: true } })
         const button = getByRole('button')
 
         expect(button).toBeDisabled()
+    })
+
+    it('receives "disabled: false" prop and renders the button default state', () => {
+        const { getByRole } = render(AButton, { props: { disabled: false } })
+        const button = getByRole('button')
+
+        expect(button).not.toBeDisabled()
+    })
+
+    it('receives no "disabled" prop and renders the button default state', () => {
+        const { getByRole } = render(AButton)
+        const button = getByRole('button')
+
+        expect(button).not.toBeDisabled()
     })
 
     it('receives the "label" prop and renders the button label', () => {
