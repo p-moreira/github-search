@@ -18,6 +18,11 @@ const stateClasses = computed(() => ({
     disabled: 'cursor-not-allowed bg-ds-color-disabled text-ds-color-on-disabled',
 }))
 
+const stateOverlayClasses = computed(() => ({
+    default: 'hover:opacity-ds-opacity-overlay-hover',
+    disabled: 'hover:opacity-0',
+}))
+
 const handleClick = () => {
     emit('click')
 }
@@ -31,7 +36,8 @@ const handleClick = () => {
         @click="handleClick"
     >
         <div
-            class="absolute left-0 top-0 h-full w-full rounded-ds-radii-xs bg-ds-color-on-surface opacity-0 transition-opacity duration-300 hover:opacity-ds-opacity-overlay-hover"
+            class="absolute left-0 top-0 h-full w-full rounded-ds-radii-xs bg-ds-color-on-surface opacity-0 transition-opacity duration-300"
+            :class="[disabled ? stateOverlayClasses.disabled : stateOverlayClasses.default]"
         />
         {{ label }}
     </button>
