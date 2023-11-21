@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom'
 import { describe, expect, it } from 'vitest'
-import { render, screen } from '@testing-library/vue'
+import { render, fireEvent, screen } from '@testing-library/vue'
 import AButton from './AButton.vue'
 
 describe('AButton', () => {
@@ -51,5 +51,19 @@ describe('AButton', () => {
         const button = getByRole('button')
 
         expect(button).toHaveTextContent('Button')
+    })
+
+    it('emits click event when button is clicked', async () => {
+        const { getByRole, emitted } = render(AButton)
+        const button = getByRole('button')
+
+        await fireEvent.click(button)
+
+        // Event name
+        expect(emitted()).toHaveProperty('click')
+        // Event count
+        expect(emitted().click).toHaveLength(1)
+        // Event payload
+        expect(emitted().click[0]).toHaveLength(0)
     })
 })

@@ -6,6 +6,14 @@ withDefaults(
     }>(),
     { label: 'Button', disabled: false }
 )
+
+const emit = defineEmits<{
+    (event: 'click'): void
+}>()
+
+const handleClick = () => {
+    emit('click')
+}
 </script>
 
 <template>
@@ -15,6 +23,7 @@ withDefaults(
             'bg-ds-color-disabled text-ds-color-on-disabled cursor-not-allowed': disabled,
         }"
         :disabled="disabled"
+        @click="handleClick"
     >
         <div
             class="absolute left-0 top-0 h-full w-full rounded-ds-radii-xs bg-ds-color-on-surface opacity-0 transition-opacity duration-300 hover:opacity-ds-opacity-overlay-hover"
