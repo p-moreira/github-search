@@ -12,6 +12,7 @@ const props = withDefaults(
 
 const emit = defineEmits<{
     (e: 'update:modelValue', value: string): void
+    (e: 'keyup', event: KeyboardEvent): void
 }>()
 
 const stateClasses = computed(() => ({
@@ -22,6 +23,10 @@ const stateClasses = computed(() => ({
 
 const handleInput = (event: Event): void => {
     emit('update:modelValue', (event.target as HTMLInputElement).value)
+}
+
+const handleKeyup = (event: KeyboardEvent): void => {
+    emit('keyup', event)
 }
 </script>
 
@@ -34,6 +39,7 @@ const handleInput = (event: Event): void => {
             :value="modelValue"
             v-bind="$attrs"
             @input="handleInput($event)"
+            @keyup="handleKeyup($event)"
         />
     </div>
 </template>

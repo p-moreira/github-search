@@ -69,4 +69,22 @@ describe('AInput', () => {
 
         expect(input).not.toBeDisabled()
     })
+
+    it('emits the keyup event', async () => {
+        const { getByRole, emitted } = render(AInput)
+        const input = getByRole('textbox')
+
+        expect(input).toHaveValue('')
+
+        await fireEvent.keyUp(input, 't')
+
+        // Event name
+        expect(emitted()).toHaveProperty('keyup')
+
+        // Event count
+        expect(emitted().keyup).toHaveLength(1)
+
+        // Event payload
+        expect(emitted().keyup[0]).toHaveLength(1)
+    })
 })
