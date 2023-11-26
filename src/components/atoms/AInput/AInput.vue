@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { computed } from 'vue'
+
 const props = withDefaults(
     defineProps<{
         modelValue?: string
@@ -12,6 +14,12 @@ const emit = defineEmits<{
     (e: 'update:modelValue', value: string): void
 }>()
 
+const stateClasses = computed(() => ({
+    default: 'bg-ds-color-surface text-ds-color-on-surface border-ds-color-outline',
+    disabled:
+        'cursor-not-allowed bg-ds-color-disabled text-ds-color-on-disabled border-ds-color-on-disabled',
+}))
+
 const handleInput = (event: Event): void => {
     emit('update:modelValue', (event.target as HTMLInputElement).value)
 }
@@ -20,7 +28,8 @@ const handleInput = (event: Event): void => {
 <template>
     <div>
         <input
-            class="focus-visible:border-ds- rounded-ds-radii-xs border border-ds-color-outline bg-ds-color-surface px-ds-ref-spacing-4 py-ds-ref-spacing-3 text-ds-font-body-large-font-size font-ds-font-body-large-font-weight leading-ds-font-body-large-line-height tracking-ds-font-body-large-letter-spacing text-ds-color-on-surface placeholder-ds-color-on-surface placeholder-opacity-ds-opacity-color-medium transition-all duration-300 focus-visible:outline-ds-color-on-surface"
+            class="focus-visible:border-ds- rounded-ds-radii-xs border px-ds-ref-spacing-4 py-ds-ref-spacing-3 text-ds-font-body-large-font-size font-ds-font-body-large-font-weight leading-ds-font-body-large-line-height tracking-ds-font-body-large-letter-spacing placeholder-ds-color-on-surface placeholder-opacity-ds-opacity-color-medium transition-all duration-300 focus-visible:outline-ds-color-on-surface"
+            :class="[$attrs.disabled ? stateClasses.disabled : stateClasses.default]"
             type="text"
             :value="modelValue"
             v-bind="$attrs"

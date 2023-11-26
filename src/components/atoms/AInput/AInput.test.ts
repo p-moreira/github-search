@@ -55,4 +55,18 @@ describe('AInput', () => {
 
         expect(input).toHaveAttribute('type', 'text')
     })
+
+    it('receives the "disabled" prop and renders the input disabled state', () => {
+        const { getByRole } = render(AInput, { props: { disabled: true } })
+        const input = getByRole('textbox')
+
+        expect(input).toBeDisabled()
+    })
+
+    it('receives no "disabled" prop and renders the input default state', () => {
+        const { getByRole } = render(AInput)
+        const input = getByRole('textbox')
+
+        expect(input).not.toBeDisabled()
+    })
 })

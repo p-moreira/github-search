@@ -17,3 +17,9 @@ export default meta
 export const Default = {
     args: {},
 }
+
+export const Disabled = {
+    args: {
+        disabled: true,
+    },
+}
