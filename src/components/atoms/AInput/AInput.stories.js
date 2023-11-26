@@ -4,7 +4,12 @@ const meta = {
     title: 'Components/AInput',
     component: AInput,
     tags: ['autodocs'],
-    argTypes: {},
+    argTypes: {
+        onInput: {
+            action: 'input',
+            table: { disable: true },
+        },
+    },
 }
 
 export default meta
