@@ -34,4 +34,25 @@ describe('AInput', () => {
         expect(emitted()['update:modelValue'][0]).toHaveLength(1)
         expect(emitted()['update:modelValue'][0]).toEqual(['test'])
     })
+
+    it('receives the "value" prop and renders the input value', () => {
+        const { getByRole } = render(AInput, { props: { value: 'test' } })
+        const input = getByRole('textbox')
+
+        expect(input).toHaveValue('test')
+    })
+
+    it('receives the "placeholder" prop and renders the input placeholder', () => {
+        const { getByRole } = render(AInput, { props: { placeholder: 'test' } })
+        const input = getByRole('textbox')
+
+        expect(input).toHaveAttribute('placeholder', 'test')
+    })
+
+    it('receives no "type" prop and renders the input default type', () => {
+        const { getByRole } = render(AInput)
+        const input = getByRole('textbox')
+
+        expect(input).toHaveAttribute('type', 'text')
+    })
 })
