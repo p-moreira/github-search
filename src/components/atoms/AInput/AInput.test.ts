@@ -32,5 +32,6 @@ describe('AInput', () => {
         // Event payload
         expect(emitted().input[0]).toHaveLength(1)
         expect(emitted()['update:modelValue'][0]).toHaveLength(1)
+        expect(emitted()['update:modelValue'][0]).toEqual(['test'])
     })
 })
