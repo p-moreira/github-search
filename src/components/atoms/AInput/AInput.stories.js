@@ -9,6 +9,10 @@ const meta = {
             action: 'input',
             table: { disable: true },
         },
+        onKeyup: {
+            action: 'keyup',
+            table: { disable: true },
+        },
     },
 }
 
