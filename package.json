@@ -50,6 +50,7 @@
     "eslint-plugin-storybook": "^0.6.15",
     "eslint-plugin-vue": "^9.17.0",
     "jsdom": "^22.1.0",
+    "miragejs": "^0.1.48",
     "npm-run-all2": "^6.1.1",
     "postcss": "^8.4.31",
     "prettier": "^3.1.0",
