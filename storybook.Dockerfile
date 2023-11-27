@@ -2,13 +2,12 @@ FROM node:lts-alpine
 
 WORKDIR /app
 
-COPY package.json ./
-COPY yarn.lock ./
+COPY package*.json ./
 
-RUN yarn
+RUN npm install
 
 COPY . .
 
 EXPOSE 6006
 
-CMD yarn storybook
+CMD npm run storybook
