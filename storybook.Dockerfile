@@ -4,10 +4,10 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install
+RUN yarn
 
 COPY . .
 
 EXPOSE 6006
 
-CMD npm run storybook
+CMD yarn storybook
