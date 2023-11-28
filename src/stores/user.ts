@@ -22,8 +22,6 @@ export const useUserStore = defineStore('user', {
                     page: 1,
                 }
                 const { total_count, items } = await githubApi.searchUsers(searchQuery)
-                console.log(items)
-                console.log(total_count)
                 this.users = items
             } catch (error) {
                 console.error(error)
