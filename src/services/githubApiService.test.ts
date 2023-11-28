@@ -26,4 +26,14 @@ describe('githubApi: searchUsers()', () => {
 
         expect(response.items.length).toBe(3)
     })
+
+    it('should allows searching by a user using a capitalized search term', async () => {
+        server.createList('user', 3, {
+            login: 'paulo',
+        })
+
+        const response = await githubApi.searchUsers({ searchTerm: 'Paulo' })
+
+        expect(response.items.length).toBe(3)
+    })
 })

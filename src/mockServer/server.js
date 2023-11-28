@@ -12,7 +12,15 @@ export function makeServer({ environment = 'development' } = {}) {
             this.get('/search/users', (schema, request) => {
                 const { q } = request.queryParams
                 const { models: filteredUsers } = schema.users.where((user) => {
-                    return user.login.includes(q) || user.email.includes(q)
+                    const { login, email } = user
+
+                    const lowerCaseTerm = q.toLowerCase()
+                    const lowerCaseLogin = login.toLowerCase()
+
+                    const isLoginMatch = lowerCaseLogin.includes(lowerCaseTerm)
+                    const isEmailMatch = email ? email.includes(lowerCaseTerm) : true
+
+                    return isLoginMatch || isEmailMatch
                 })
 
                 return {
