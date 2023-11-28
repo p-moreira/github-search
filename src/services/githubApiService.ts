@@ -19,8 +19,8 @@ export const githubApi = {
         const path = '/api/search/users'
         const seachParams = {
             q: query.searchTerm,
-            page: `${query.page}` || '1',
-            per_page: `${query.perPage}` || '20',
+            page: query.page ? `${query.page}` : '1',
+            per_page: query.perPage ? `${query.perPage}` : '20',
         }
         const queryString = new URLSearchParams(seachParams).toString()
         const url = `${path}?${queryString}`
