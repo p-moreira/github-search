@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import APlaceholderAvatar from '@/components/atoms/APlaceholderAvatar/APlaceholderAvatar.vue'
+
 const props = withDefaults(
     defineProps<{
         image: string
@@ -16,9 +18,14 @@ const props = withDefaults(
         <header class="w-16">
             <picture>
                 <img
+                    v-if="props.image"
                     :src="props.image"
                     :alt="props.login"
                     class="h-auto w-full max-w-full rounded-ds-radii-xs"
+                />
+                <APlaceholderAvatar
+                    v-else
+                    class="h-16 w-16 rounded-ds-radii-xs bg-ds-color-disabled"
                 />
             </picture>
         </header>
