@@ -3,7 +3,7 @@ import { githubApi } from './githubApiService'
 import { makeServer } from '@/mockServer/server'
 
 describe('githubApi: searchUsers()', () => {
-    let server
+    let server: any
 
     beforeEach(() => {
         server = makeServer({ environment: 'test' })
@@ -17,7 +17,7 @@ describe('githubApi: searchUsers()', () => {
         expect(githubApi.searchUsers({ searchTerm: '' })).rejects.toThrow('Search term is required')
     })
 
-    it('should return a list of 3 users when search term = "paulo"', async () => {
+    it('should return a list of 3 users when the seaching by "paulo"', async () => {
         server.createList('user', 3, {
             login: 'paulo',
         })
