@@ -15,9 +15,10 @@ const handleButtonClick = () => {
 </script>
 
 <template>
-    <div class="flex items-center gap-ds-spacing-sm">
+    <div class="flex w-full max-w-[600px] items-center gap-ds-spacing-sm">
         <AInput
             v-model="searchTerm"
+            class="w-full max-w-[600px]"
             placeholder="Usuário"
             @keyup.enter="handleButtonClick"
         ></AInput>
