@@ -22,12 +22,17 @@ export const useUserStore = defineStore('user', {
 
     actions: {
         async fetchUsers(searchTerm: string, currentPage?: number) {
+            const page = currentPage || 1
+            const canFetch = searchTerm !== this.searchTerm || page !== this.currentPage
+
+            if (!canFetch) return
+
             this.fetchState = 'pending'
             this.fetchError = null
 
             const searchQuery: searchQuery = {
                 searchTerm,
-                page: currentPage || 1,
+                page,
             }
 
             try {
@@ -35,7 +40,7 @@ export const useUserStore = defineStore('user', {
 
                 this.users = items
                 this.totalCount = total_count
-                this.currentPage = currentPage || 1
+                this.currentPage = page
                 this.searchTerm = searchTerm
                 this.fetchState = 'done'
                 this.fetchError = null
