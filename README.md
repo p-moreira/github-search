@@ -8,6 +8,7 @@ Search by users on Github.
 - Vitest
 - Storybookjs to develop components in isolation mode
 - CSS tokens using figma + Style Dictionary
+- Tailwind CSS
 
 ## Recommended IDE Setup
 
@@ -28,32 +29,30 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Project Setup
+## Project Setup using docker and docker compose for development
 
 ```sh
-npm install
+docker compose up -d --build
 ```
 
-### Compile and Hot-Reload for Development
+- The app wil be available at localhost:5173
 
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
+- The storybook docs wil be available at localhost:6006
 
 ### Run Unit Tests with [Vitest](https://vitest.dev/)
 
 ```sh
-npm run test:unit
+docker exec -it github-search npm run test
 ```
 
 ### Lint with [ESLint](https://eslint.org/)
 
 ```sh
-npm run lint
+docker exec -it github-search npm run lint
+```
+
+### Shutdown the project
+
+```sh
+docker compose down
 ```
