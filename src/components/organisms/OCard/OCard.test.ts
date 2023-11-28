@@ -5,7 +5,12 @@ import OCard from './OCard.vue'
 
 describe('OCard', () => {
     it('should render', () => {
-        const { getByRole } = render(OCard)
+        const { getByRole } = render(OCard, {
+            props: {
+                login: 'vuejs-br',
+                link: 'https://avatars.githubusercontent.com/u/4138302?v=4',
+            },
+        })
         const card = getByRole('article')
 
         expect(card).toBeInTheDocument()

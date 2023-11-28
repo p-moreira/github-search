@@ -3,11 +3,11 @@ import APlaceholderAvatar from '@/components/atoms/APlaceholderAvatar/APlacehold
 
 const props = withDefaults(
     defineProps<{
-        image: string
         login: string
         link: string
+        image?: string
     }>(),
-    {}
+    { image: '' }
 )
 </script>
 
