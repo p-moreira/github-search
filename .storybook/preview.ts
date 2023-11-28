@@ -1,7 +1,15 @@
-import type { Preview } from '@storybook/vue3'
+import { type Preview, setup } from '@storybook/vue3'
+import { type App } from 'vue'
+import { createPinia } from 'pinia'
 import '../src/assets/css/main.css'
 
 import { withThemeByDataAttribute } from "@storybook/addon-themes";
+
+const pinia = createPinia()
+
+setup((app: App) => {
+    app.use(pinia);
+})
 
 const preview: Preview = {
     parameters: {
