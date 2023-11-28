@@ -30,7 +30,7 @@ const handleClick = () => {
 
 <template>
     <button
-        class="relative flex justify-center rounded-ds-radii-xs border-0 px-ds-spacing-md py-ds-spacing-sm font-ds-font-label-large-font-family text-ds-font-label-large-font-size font-ds-font-label-large-font-weight transition-all duration-300"
+        class="relative flex h-fit min-w-[2.75rem] items-center justify-center rounded-ds-radii-xs border-0 px-ds-ref-spacing-4 py-ds-ref-spacing-3 font-ds-font-label-large-font-family text-ds-font-label-large-font-size font-ds-font-label-large-font-weight leading-ds-font-label-large-line-height transition-all duration-300"
         :class="[disabled ? stateClasses.disabled : stateClasses.default]"
         :disabled="disabled"
         @click="handleClick"
