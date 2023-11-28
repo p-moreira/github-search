@@ -17,14 +17,19 @@ const props = withDefaults(
             <picture>
                 <img
                     :src="props.image"
-                    alt=""
+                    :alt="props.login"
                     class="h-auto w-full max-w-full rounded-ds-radii-xs"
                 />
             </picture>
         </header>
 
         <section>
-            <a :href="props.link" target="_blank" rel="noopener nofollow">
+            <a
+                :href="props.link"
+                target="_blank"
+                rel="noopener nofollow"
+                class="hover:text-ds-color-primary"
+            >
                 <h3 class="a-card__description">{{ props.login }}</h3>
             </a>
         </section>
