@@ -14,6 +14,7 @@ export const useUserStore = defineStore('user', {
     state: () => ({
         users: [] as User[],
         fetchState: 'idle' as FetchState,
+        fetchError: null as unknown | null,
         totalCount: 0 as number,
         currentPage: 1 as number,
         searchTerm: '' as string,
@@ -22,6 +23,7 @@ export const useUserStore = defineStore('user', {
     actions: {
         async fetchUsers(searchTerm: string, currentPage?: number) {
             this.fetchState = 'pending'
+            this.fetchError = null
 
             const searchQuery: searchQuery = {
                 searchTerm,
@@ -35,11 +37,12 @@ export const useUserStore = defineStore('user', {
                 this.totalCount = total_count
                 this.currentPage = currentPage || 1
                 this.searchTerm = searchTerm
+                this.fetchState = 'done'
+                this.fetchError = null
             } catch (error) {
                 this.fetchState = 'error'
+                this.fetchError = error
                 console.error(error)
-            } finally {
-                this.fetchState = 'done'
             }
         },
     },

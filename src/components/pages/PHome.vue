@@ -34,14 +34,31 @@ const handleNextButtonClick = () => {
     <OHeaderMain />
     <main class="pt-ds-spacing-5xl">
         <section class="p-ds-spacing-md sm:p-ds-spacing-xl md:p-ds-spacing-5xl lg:p-ds-spacing-9xl">
-            <ul
+            <div
                 v-if="fetchState === 'done' && users.length"
-                class="grid grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-ds-spacing-md"
+                class="flex flex-col gap-ds-spacing-lg"
             >
-                <li v-for="user in users" :key="user.id">
-                    <OCard :link="user.html_url" :login="user.login" :image="user.avatar_url" />
-                </li>
-            </ul>
+                <ul
+                    class="grid grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-ds-spacing-md"
+                >
+                    <li v-for="user in users" :key="user.id">
+                        <OCard :link="user.html_url" :login="user.login" :image="user.avatar_url" />
+                    </li>
+                </ul>
+
+                <div class="flex gap-ds-spacing-md">
+                    <AButton
+                        :disabled="!canGoBack"
+                        label="Anterior"
+                        @click="handlePreviousButtonClick"
+                    />
+                    <AButton
+                        :disabled="!canAdvance"
+                        label="Próxima"
+                        @click="handleNextButtonClick"
+                    />
+                </div>
+            </div>
 
             <MSkeletonCard v-if="fetchState === 'pending'" />
 
@@ -58,14 +75,10 @@ const handleNextButtonClick = () => {
             >
                 Busque por um usuário!
             </p>
-        </section>
 
-        <footer
-            v-if="fetchState === 'done' && users.length"
-            class="flex gap-ds-spacing-md px-ds-spacing-md sm:px-ds-spacing-xl md:px-ds-spacing-5xl lg:px-ds-spacing-9xl"
-        >
-            <AButton :disabled="!canGoBack" label="Anterior" @click="handlePreviousButtonClick" />
-            <AButton :disabled="!canAdvance" label="Próxima" @click="handleNextButtonClick" />
-        </footer>
+            <p v-if="fetchState === 'error'" class="text-ds-font-title-large-font-size">
+                Ocorreu um erro ao buscar os usuários!
+            </p>
+        </section>
     </main>
 </template>
