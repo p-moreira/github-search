@@ -33,7 +33,7 @@ const handleKeyup = (event: KeyboardEvent): void => {
 <template>
     <div>
         <input
-            class="rounded-ds-radii-xs border px-ds-ref-spacing-4 py-ds-ref-spacing-3 text-ds-font-body-large-font-size font-ds-font-body-large-font-weight leading-ds-font-body-large-line-height tracking-ds-font-body-large-letter-spacing placeholder-ds-color-on-surface placeholder-opacity-ds-opacity-color-medium transition-all duration-300 focus-visible:outline-ds-color-on-surface"
+            class="rounded-ds-radii-xs border px-ds-ref-spacing-3 py-ds-ref-spacing-3 text-ds-font-label-large-font-size font-ds-font-label-large-font-weight leading-ds-font-label-large-line-height tracking-ds-font-label-large-letter-spacing placeholder-ds-color-on-surface placeholder-opacity-ds-opacity-color-medium transition-all duration-300 focus-visible:outline-ds-color-on-surface"
             :class="[$attrs.disabled ? stateClasses.disabled : stateClasses.default]"
             type="text"
             :value="modelValue"
