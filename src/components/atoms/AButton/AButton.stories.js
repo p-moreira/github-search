@@ -24,3 +24,10 @@ export const Default = {
         disabled: false,
     },
 }
+
+export const Disabled = {
+    args: {
+        label: 'Button',
+        disabled: true,
+    },
+}
