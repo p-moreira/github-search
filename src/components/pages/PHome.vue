@@ -64,7 +64,6 @@ const handleNextButtonClick = () => {
             v-if="fetchState === 'done' && users.length"
             class="flex gap-ds-spacing-md px-ds-spacing-md sm:px-ds-spacing-xl md:px-ds-spacing-5xl lg:px-ds-spacing-9xl"
         >
-            <!-- <div v-for="pageNumber in totalPages" :key="pageNumber">{{ pageNumber }}</div> -->
             <AButton :disabled="!canGoBack" label="Anterior" @click="handlePreviousButtonClick" />
             <AButton :disabled="!canAdvance" label="Próxima" @click="handleNextButtonClick" />
         </footer>
