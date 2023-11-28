@@ -17,7 +17,7 @@ describe('githubApi: searchUsers()', () => {
         expect(githubApi.searchUsers({ searchTerm: '' })).rejects.toThrow('Search term is required')
     })
 
-    it('should return a list of 3 users when the seaching by "paulo"', async () => {
+    it('should return a list of users when searching by a term', async () => {
         server.createList('user', 3, {
             login: 'paulo',
         })
