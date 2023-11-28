@@ -1,6 +1,8 @@
 # Github search application
 
-Search by users on Github.
+Search users by login name on Github.
+
+## Stack
 
 - Vue.js 3
 - Vite
@@ -9,8 +11,9 @@ Search by users on Github.
 - Storybookjs to develop components in isolation mode
 - CSS tokens using figma + Style Dictionary
 - Tailwind CSS
+- ESLint + Prettier
 
-## Recommended IDE Setup
+## 💻 Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
@@ -29,20 +32,40 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Project Setup using docker and docker compose for development
+## Before starting
+
+> This project uses docker and docker compose for development
+
+> Install [docker](https://docs.docker.com/get-docker/)
+
+> Alternatively, if you are working on a macOS computer, [orbstack](https://orbstack.dev/download) can be faster 🚀🚀🚀
+
+## Running the project for the firs time
 
 ```sh
 docker compose up -d --build
 ```
 
-- The app wil be available at localhost:5173
+## To see the logs
 
-- The storybook docs wil be available at localhost:6006
+```sh
+docker compose logs -f
+```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+> The app will be available at [localhost:5173](http://localhost:5173)
+
+> The storybook docs will be available at [localhost:6006](http://localhost:6006)
+
+### Running Unit Tests in the watch mode with [Vitest](https://vitest.dev/)
 
 ```sh
 docker exec -it github-search npm run test
+```
+
+## Running test coverage
+
+```sh
+docker exec -it github-search npm run coverage
 ```
 
 ### Lint with [ESLint](https://eslint.org/)
@@ -51,8 +74,42 @@ docker exec -it github-search npm run test
 docker exec -it github-search npm run lint
 ```
 
-### Shutdown the project
+### To shutdown the project
 
 ```sh
 docker compose down
 ```
+
+## If you need to access the containers
+
+> app container
+
+```sh
+docker exec -it github-search sh
+```
+
+> storybook container
+
+```sh
+docker exec -it storybook sh
+```
+
+## 🤝 Extras
+
+> If you need to change the look and feel, you can customize the design tokens on this file:
+
+ `src/assets/design-system/tokens/ds-exported-figma-tokens.json`
+
+ > After that, you need to build the css variables files again:
+
+```sh
+docker exec -it npm run build:theme
+```
+
+## 📫 Contributing
+
+1. Fork this repo
+2. Create a branch: `git checkout -b feat/branch-name`.
+3. Do commits using [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/): `git commit -m 'feat(module): add a feature'`
+4. Do a push: `git push origin feat/branch-name`
+5. Open a Pull Request
