@@ -4,7 +4,7 @@ const FETCH_OPTIONS = {
     },
 }
 
-type searchQuery = {
+export type searchQuery = {
     searchTerm: string
     page?: number
     perPage?: number

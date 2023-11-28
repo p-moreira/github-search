@@ -21,6 +21,8 @@
     "build:theme": "npm run transform:global && npm run transform:light && npm run transform:dark && npm run build:tokens"
   },
   "dependencies": {
+    "@pinia/testing": "^0.1.3",
+    "pinia": "^2.1.7",
     "vue": "^3.3.4",
     "vue-router": "^4.2.5"
   },
