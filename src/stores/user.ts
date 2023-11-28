@@ -2,6 +2,13 @@ import { defineStore } from 'pinia'
 import { githubApi } from '@/services/githubApiService'
 import type { searchQuery } from '@/services/githubApiService'
 
+export type User = {
+    login: string
+    id: string
+    html_url: string
+    avatar_url: string
+}
+
 export const useUserStore = defineStore('user', {
     state: () => ({
         users: [],
